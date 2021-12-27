@@ -1,16 +1,16 @@
-$DOTVIM=$HOME/vimfiles
-$DOTVIMRC=$HOME/_vimrc
+$DOTVIM="${HOME}\vimfiles"
+$DOTVIMRC="${HOME}\_vimrc"
 
 # Backing up current .vim files
 
 if (Test-Path $DOTVIM) {
-	cp -r $DOTVIM $DOTVIM.bak
+	Copy-Item $DOTVIM -Destination "${DOTVIM}.bak" -Recurse -Force
 }
 
 if (Test-Path $DOTVIMRC) {
-	cp -r $DOTVIMRC $DOTVIMRC.bak
+	Copy-Item $DOTVIMRC -Destination "${DOTVIMRC}.bak" -Force
 }
 
 echo "Copying the configuration files into $HOME"
-cp -r ./vim $DOTVIM
-cp ./.vimrc $DOTVIMRC
+Copy-Item .\.vim -Destination $DOTVIM -Recurse -Force
+cp .\.vimrc -Destination $DOTVIMRC -Force
