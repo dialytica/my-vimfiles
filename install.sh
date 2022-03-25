@@ -8,5 +8,7 @@ echo "Checking if vim configuration exists and back it up"
 [ -e $DOTVIMRC ] && cp -f $DOTVIMRC $DOTVIMRC.bak
 
 echo "Copying the configuration files into $HOME"
-cp -r ./.vim  $DOTVIM
-cp ./.vimrc  $DOTVIMRC
+rm -rf $DOTVIM
+rm -r $DOTVIMRC
+cp -rs $PWD/.vim  $DOTVIM
+cp -s $PWD/.vimrc  $DOTVIMRC

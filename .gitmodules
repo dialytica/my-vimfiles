@@ -25,3 +25,6 @@
 [submodule ".vim/pack/plugins/start/ayu-vim"]
 	path = .vim/pack/plugins/start/ayu-vim
 	url = https://github.com/ayu-theme/ayu-vim.git
+[submodule ".vim/pack/plugins/start/tmuxline.vim"]
+	path = .vim/pack/plugins/start/tmuxline.vim
+	url = https://github.com/edkolev/tmuxline.vim.git

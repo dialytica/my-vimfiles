@@ -9,7 +9,7 @@ set nocompatible
 
 "Set the color theme to be used
 set termguicolors
-let ayucolor="mirage"
+let ayucolor="dark"
 colorscheme ayu
 
 "Attempt to detect filetype/contents so that vim can autoindent etc
@@ -79,3 +79,4 @@ let g:python_highlight_all = 1
 "Tagbar toggle
 nnoremap <silent> <F8> :TagbarToggle<CR>
 
+set mouse=a
